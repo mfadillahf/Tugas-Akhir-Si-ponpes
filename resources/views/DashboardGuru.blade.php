@@ -3,7 +3,7 @@
 @endphp
 @extends('layouts/layoutMaster')
 
-@section('title', 'Dashboard - Admin')
+@section('title', 'Dashboard - Guru')
 
 @section('vendor-style')
 @vite([
@@ -49,65 +49,66 @@
         </div>
     </div>
 
-<!-- Statistik Cards -->
-<div class="row g-4">
-  <div class="col-sm-6 col-lg-3">
-    <div class="card card-border-shadow-primary h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-2">
-          <div class="avatar me-4">
-            <span class="avatar-initial rounded-3 bg-label-primary"><i class="ri-group-3-line"></i></span>
+  <!-- Statistik Cards -->
+  <div class="row g-4">
+    <div class="col-sm-6 col-lg-3">
+      <div class="card card-border-shadow-primary h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <div class="avatar me-4">
+              <span class="avatar-initial rounded-3 bg-label-primary"><i class="ri-group-3-line"></i></span>
+            </div>
+            <h4 class="mb-0">{{ $jumlahSantri }}</h4>
           </div>
-          <h4 class="mb-0">{{ $jumlahSantri }}</h4>
+          <h6 class="mb-0 fw-normal">Jumlah Santri</h6>
         </div>
-        <h6 class="mb-0 fw-normal">Jumlah Santri</h6>
       </div>
     </div>
-  </div>
 
-  <div class="col-sm-6 col-lg-3">
-    <div class="card card-border-shadow-success h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-2">
-          <div class="avatar me-4">
-            <span class="avatar-initial rounded-3 bg-label-success"><i class="ri-user-2-fill"></i></span>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card card-border-shadow-success h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <div class="avatar me-4">
+              <span class="avatar-initial rounded-3 bg-label-success"><i class="ri-user-2-fill"></i></span>
+            </div>
+            <h4 class="mb-0">{{ $jumlahGuru }}</h4>
           </div>
-          <h4 class="mb-0">{{ $jumlahGuru }}</h4>
+          <h6 class="mb-0 fw-normal">Jumlah Guru</h6>
         </div>
-        <h6 class="mb-0 fw-normal">Jumlah Guru</h6>
       </div>
     </div>
-  </div>
 
-  <div class="col-sm-6 col-lg-3">
-    <div class="card card-border-shadow-warning h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-2">
-          <div class="avatar me-4">
-            <span class="avatar-initial rounded-3 bg-label-warning"><i class="ri-user-2-line"></i></span>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card card-border-shadow-warning h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <div class="avatar me-4">
+              <span class="avatar-initial rounded-3 bg-label-warning"><i class="ri-user-2-line"></i></span>
+            </div>
+            <h4 class="mb-0">{{ $jumlahDonatur }}</h4>
           </div>
-          <h4 class="mb-0">{{ $jumlahDonatur }}</h4>
+          <h6 class="mb-0 fw-normal">Jumlah Donatur</h6>
         </div>
-        <h6 class="mb-0 fw-normal">Jumlah Donatur</h6>
       </div>
     </div>
-  </div>
 
-  <div class="col-sm-6 col-lg-3">
-    <div class="card card-border-shadow-danger h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-2">
-          <div class="avatar me-4">
-            <span class="avatar-initial rounded-3 bg-label-danger"><i class="ri-group-line"></i></span>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card card-border-shadow-danger h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <div class="avatar me-4">
+              <span class="avatar-initial rounded-3 bg-label-danger"><i class="ri-group-line"></i></span>
+            </div>
+            <h4 class="mb-0">{{ $jumlahPengurus }}</h4>
           </div>
-          <h4 class="mb-0">{{ $jumlahPengurus }}</h4>
+          <h6 class="mb-0 fw-normal">Jumlah Pengurus</h6>
         </div>
-        <h6 class="mb-0 fw-normal">Jumlah Pengurus</h6>
       </div>
     </div>
   </div>
+  <!-- /Statistik Cards -->
 </div>
-</div>
-<!-- /Statistik Cards -->
+
 
 @endsection

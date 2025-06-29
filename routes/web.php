@@ -121,9 +121,14 @@ Route::middleware(['auth'])->group(function () {
 
     // infaq
     Route::post('/infaq/pay', [InfaqController::class, 'pay'])->name('infaq.pay');
-    
     Route::resource('infaq', InfaqController::class);
     Route::get('infaq/{id}/detail', [InfaqController::class, 'showDetail'])->name('infaq.showDetail');
+
+     // terima dan tolak infaq
+    Route::middleware('role:admin')->group(function () {
+        Route::post('/infaq/{id}/terima', [InfaqController::class, 'terima'])->name('infaq.terima');
+        Route::post('/infaq/{id}/tolak', [InfaqController::class, 'tolak'])->name('infaq.tolak');
+    });
 
     // sistem
     Route::resource('berita', BeritaController::class);

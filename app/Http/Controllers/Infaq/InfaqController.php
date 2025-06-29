@@ -184,4 +184,22 @@ class InfaqController extends Controller
         return response()->json(['message' => 'Callback diproses'], 200);
     }
 
+    // public function terima($id)
+    // {
+    //     $infaq = Infaq::findOrFail($id);
+    //     $infaq->status = 'paid';
+    //     $infaq->save();
+
+    //     return back()->with('success', 'Status infaq berhasil diubah menjadi Lunas.');
+    // }
+
+    // public function tolak($id)
+    // {
+    //     $infaq = Infaq::findOrFail($id);
+    //     $infaq->status = 'failed';
+    //     $infaq->save();
+
+    //     return back()->with('success', 'Status infaq berhasil diubah menjadi Gagal.');
+    // }
+
 }
